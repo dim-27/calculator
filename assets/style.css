@@ -67,20 +67,16 @@ body {
   padding: 1rem 1rem;
 }
 
+
+
 @media (min-width: 375px) {
   body {
     display: grid;
     place-items: center;
   }
 
-  .buttons {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1.5rem;
-    min-height: 25rem;
-  }
-
-  .buttons button {
-    background-color: #ff884d;
+  button{
+    background-color: #fe681d;
     color: #ffffff;
     font-weight: 800;
     border: transparent;
@@ -88,7 +84,28 @@ body {
     border-radius: 10rem;
     cursor: pointer;
   }
+  
+  #calculation {
+    background-color: #4b558fdf;
+  }
+  
+  .buttons {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    min-height: 25rem;
+  }
 
+  button:hover {
+    background-color: #ffac82;
+  }
+
+  button:active {
+    transform: translateY(0.1em);
+  }
+
+  #calculation:hover {
+    background-color: #696d87df ;
+  }
 }
 
 
