@@ -4,7 +4,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 * {
@@ -20,31 +20,75 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5em;
-  padding: 0.5em;
+  font-size: 1.5rem;
+  padding: 0.5rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+  color: white;
+  background-color: #03346E;
 }
 
 #main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: 0 1em;
-
+  margin-inline: auto;
 }
 
 #calculator {
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  min-width: 25rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  margin: 0 auto;
+  background-color: #021526;
+  box-shadow: 6px 6px 2px 1px rgba(199, 199, 255, 0.2);
+  padding: 1rem 1rem;
+}
+
+#screen {
+  text-align: right;
+  margin: 1rem 1rem;
+  padding: 0 1rem;
+  /* padding-top: 3rem;
+  padding-right: 2rem; */
+  background-color: #304463;
+  box-shadow: 6px 6px 2px 1px rgba(199, 199, 255, 0.082);
+  border-radius: 1rem;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 .container {
-  height: 75vh;
-  min-height: 500px;
-  padding: 10px;
+  min-height: 30rem;
+}
+
+.buttons {
+  display: grid;
+  padding: 1rem 1rem;
+}
+
+@media (min-width: 375px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  .buttons {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    min-height: 25rem;
+  }
+
+  .buttons button {
+    background-color: #ff884d;
+    color: #ffffff;
+    font-weight: 800;
+    border: transparent;
+    box-shadow: 6px 6px 2px 1px rgba(199, 199, 255, 0.2);
+    border-radius: 10rem;
+    cursor: pointer;
+  }
+
 }
 
 
