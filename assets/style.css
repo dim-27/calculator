@@ -4,7 +4,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* border: 1px solid black; */
+  /* border: 1px solid white; */
 }
 
 * {
@@ -45,29 +45,55 @@ body {
   padding: 1rem 1rem;
 }
 
-#screen {
+#clear {
+  background-color: #ee0a0a;
+}
+
+#delete {
+  background-color: #f9f5f5;
+  color: #021526;
+}
+
+#current-operation , #memory-operation {
+  min-height: 3.5rem;
   text-align: right;
   margin: 1rem 1rem;
   padding: 0 1rem;
-  /* padding-top: 3rem;
-  padding-right: 2rem; */
   background-color: #304463;
   box-shadow: 6px 6px 2px 1px rgba(199, 199, 255, 0.082);
   border-radius: 1rem;
-  font-size: 3rem;
   font-weight: 600;
+  max-height: 10rem;
+}
+
+#current-operation {
+  font-size: 3rem;
+}
+
+#memory-operation {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  color: #717171;
+  background-color: #082f68;
 }
 
 .container {
   min-height: 30rem;
 }
 
-.buttons {
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  min-height: 3rem;
+}
+
+.number-op {
   display: grid;
   padding: 1rem 1rem;
 }
-
-
 
 @media (min-width: 375px) {
   body {
@@ -85,13 +111,13 @@ body {
     cursor: pointer;
   }
   
-  #calculation {
+  #evaluate {
     background-color: #4b558fdf;
   }
   
-  .buttons {
+  .number-op  {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1.5rem;
+    gap: 1.5rem;
     min-height: 25rem;
   }
 
@@ -103,7 +129,7 @@ body {
     transform: translateY(0.1em);
   }
 
-  #calculation:hover {
+  #evaluate:hover {
     background-color: #696d87df ;
   }
 }
