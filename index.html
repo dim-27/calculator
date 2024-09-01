@@ -5,18 +5,45 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="./assets/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>DOM Project | Calculator</title>
   </head>
   <body>
     <div id="main">
-      <h1>Calculator App</h1>
       <div id="calculator">
         <div class="container">
-            <h3>test</h3>
+            <div id="memory-operation"></div>
+            <div id="current-operation">0</div>
+            <div class="buttons"> 
+              <div class="options">
+                <button id="clear">A/C</button>
+                <button id="delete">Delete</button>
+              </div>
+              <div class="number-op">
+                <button data-number>7</button>
+                <button data-number>8</button>
+                <button data-number>9</button>
+                <button id="operator">/</button>
+                <button data-number>4</button>
+                <button data-number>5</button>
+                <button data-number>6</button>
+                <button id="operator">x</button>  
+                <button data-number>1</button>
+                <button data-number>2</button>
+                <button data-number>3</button>
+                <button id="operator">-</button>
+                <button data-number>.</button>
+                <button data-number>0</button>
+                <button id="evaluate">=</button>
+                <button id="operator">+</button>
+              </div>
+            </div>
         </div>
       </div>
     </div>
+    <footer>
+      <div id="footer">Dimas Firmanda © 2024</div>
+    </footer>
     <script src="./assets/script.js" norefer></script>
   </body>
 </html>
