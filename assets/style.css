@@ -4,7 +4,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* border: 1px solid white; */
 }
 
 * {
@@ -21,7 +20,6 @@ body {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
-  padding: 0.5rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   color: white;
@@ -36,7 +34,7 @@ body {
 #calculator {
   display: flex;
   flex-direction: column;
-  min-width: 25rem;
+  min-width: 22.5rem;
   border: 1px solid black;
   border-radius: 2rem;
   margin: 0 auto;
