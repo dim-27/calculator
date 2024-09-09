@@ -34,11 +34,9 @@ function selectOperation(operator) {
   if (memoryNum !== '') {
     operate();
   }
-
   operation = operator;
   memoryNum = currentNum;
   currentNum = '';
-
   memoryOperation.textContent = `${memoryNum} ${operation}`
 }
 
@@ -97,8 +95,6 @@ function operate() {
     }
   }
 
-  
-
   operation = '';
   memoryNum = '';
 
@@ -132,7 +128,8 @@ window.addEventListener('keydown', function(event) {
   if(event.key === "Escape") clearAll();
   if(event.key === "Backspace" || event.key === "Delete") deleteNumber();
   if(event.key === "Enter" || event.key === "=") operate();
-  if(event.key === "+" || event.key === "-" || event.key === "/" || event.key === "x") selectOperation(event.key);
+  if(event.key === "+" || event.key === "-" || event.key === "/") selectOperation(event.key);
+  if(event.key === "*") selectOperation("x");
 
 
   event.preventDefault();
